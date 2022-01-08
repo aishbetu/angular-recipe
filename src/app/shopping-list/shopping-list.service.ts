@@ -12,7 +12,6 @@ export class ShoppingListService {
     new Ingredient('Apples', 5),
     new Ingredient('Tomatoes', 10)
   ];
-  constructor() { }
 
   getIngredients() {
     return this.ingredients.slice();
@@ -23,8 +22,8 @@ export class ShoppingListService {
   }
 
   addIngredient(ingredient: Ingredient) {
-      this.ingredients.push(ingredient);
-      this.ingredientChanged.next(this.ingredients.slice());
+    this.ingredients.push(ingredient);
+    this.ingredientChanged.next(this.ingredients.slice());
   }
 
   addIngredients(ingredients: Ingredient[]) {
